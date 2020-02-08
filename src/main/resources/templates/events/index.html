@@ -7,25 +7,9 @@
 <body class="container">
 
 <h1>All Events</h1>
+<nav th:replace="fragments :: navigation"></nav>
 
-<div th:fragment="table">
-    <table class="table" >
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Address</th>
-        </tr>
-        </thead>
-
-        <tr th:each="event : ${events}">
-            <td th:text="${event.key}"></td>
-            <td th:text="${event.value}"></td>
-            <td th:text="${address}"></td>
-        </tr>
-        <tbody>
-    </table>
-</div>
+<div th:replace="fragments :: table"></div>
 
 </body>
 </html>

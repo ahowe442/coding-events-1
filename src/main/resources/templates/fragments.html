@@ -9,13 +9,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </head>
+
+
 <body class="container">
-    <nav th:fragment="header">
+
+    <nav th:fragment="navigation">
         <ul class="nav">
             <li class="nav-item"><a href="/events">All Events</a></li>
             <li class="nav-item"><a href="/events/create">Create Events</a></li>
         </ul>
     </nav>
 
+    <div th:fragment="table">
+        <table class="table" >
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+
+            <tr th:each="event : ${events}">
+                <td th:text="${event.key}"></td>
+                <td th:text="${event.value}"></td>
+                <td th:text="${address}"></td>
+            </tr>
+            <tbody>
+        </table>
+    </div>
+
 </body>
+
+
 </html>
