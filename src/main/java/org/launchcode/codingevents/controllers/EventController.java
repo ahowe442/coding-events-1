@@ -22,6 +22,7 @@ public class EventController {
         events.put("Code With Pride", "LGBTQ Coding Event");
         events.put("Strange Loop", "Learning how to iterate with code");
         events.put("Apple WWDC", "Apple World Wide Dev Conference" );
+        events.put("Tester Event", "Description of Event");
 
         model.addAttribute("events", events);
         return "events/index";
