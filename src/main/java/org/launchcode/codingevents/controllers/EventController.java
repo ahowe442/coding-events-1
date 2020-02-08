@@ -24,9 +24,12 @@ public class EventController {
         events.put("Apple WWDC", "Apple World Wide Dev Conference" );
         events.put("Tester Event", "Description of Event");
 
+        String address ="1 Holmes St. KC, MO 64111";
+
         model.addAttribute("events", events);
         model.addAttribute("eventKeys", events.keySet());
         model.addAttribute("eventValues", events.values());
+        model.addAttribute("address", address);
         return "events/index";
     }
 

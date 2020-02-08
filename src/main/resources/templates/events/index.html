@@ -8,28 +8,24 @@
 
 <h1>All Events</h1>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Address</th>
-    </tr>
-    </thead>
+<div th:fragment="table">
+    <table class="table" >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+        </tr>
+        </thead>
 
-    <tr th:each="event : ${events}">
-        <td th:text="${event.key}"></td>
-        <td th:text="${event.value}"></td>
-    </tr>
-<!--    <tr th:each="eventKey : ${eventKeys}">-->
-<!--        <td th:text="${eventKey}"></td>-->
-<!--    </tr>-->
-
-    <tbody>
-
-
-
-</table>
+        <tr th:each="event : ${events}">
+            <td th:text="${event.key}"></td>
+            <td th:text="${event.value}"></td>
+            <td th:text="${address}"></td>
+        </tr>
+        <tbody>
+    </table>
+</div>
 
 </body>
 </html>
