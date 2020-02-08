@@ -4,15 +4,32 @@
     <meta charset="UTF-8"/>
     <title>Coding Events</title>
 </head>
-<body>
+<body class="container">
 
 <h1>All Events</h1>
 
-<ul>
-    <th:block th:each="event : ${events}">
-        <li th:text="${event}"></li>
-    </th:block>
-</ul>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+
+    <tr th:each="event : ${events}">
+        <td th:text="${event.key}"></td>
+        <td th:text="${event.value}"></td>
+    </tr>
+<!--    <tr th:each="eventKey : ${eventKeys}">-->
+<!--        <td th:text="${eventKey}"></td>-->
+<!--    </tr>-->
+
+    <tbody>
+
+
+
+</table>
 
 </body>
 </html>

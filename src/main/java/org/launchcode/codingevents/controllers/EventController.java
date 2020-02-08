@@ -25,6 +25,8 @@ public class EventController {
         events.put("Tester Event", "Description of Event");
 
         model.addAttribute("events", events);
+        model.addAttribute("eventKeys", events.keySet());
+        model.addAttribute("eventValues", events.values());
         return "events/index";
     }
 
