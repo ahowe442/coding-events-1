@@ -21,6 +21,7 @@ public class Event {
         this.name = name;
     }
 
+//I'm not sure why the @Override notation is above the toString method?
     @Override
     public String toString() {
         return name;
